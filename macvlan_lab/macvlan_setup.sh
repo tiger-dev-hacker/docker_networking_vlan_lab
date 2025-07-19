@@ -1,3 +1,5 @@
+$IP_ADDR = " "; 
+
 docker ps
 
 docker rm -f nginx nginxdemo
@@ -9,3 +11,9 @@ docker run -itd --inetwork macnet --name cont1 --ip 192.168.1.50
 docker exec -it cont1 sh
 
 #Inside the contain ping the IP address of the second container
+
+ping $IP_ADDR #ip of second container
+
+ip addr
+
+ifconfig ens33 promisc
